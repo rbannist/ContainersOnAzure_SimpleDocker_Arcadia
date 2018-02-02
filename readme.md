@@ -8,7 +8,7 @@ This has been completed in advance.  Access your 'Docker' VM using Guacamole.
 
 <br>
 
-![Step 1 Image](images/SimpleDocker_Step1.png?raw=true)
+![Step 1 Image](images/SimpleDocker_Step1.jpg?raw=true)
 
 <br><br>
 
@@ -24,7 +24,7 @@ Note the "Unable to find image 'hello-world:latest' locally" and the subsequent 
 
 <br>
 
-![Step 2 Image](images/SimpleDocker_Step2.png?raw=true)
+![Step 2 Image](images/SimpleDocker_Step2.jpg?raw=true)
 
 <br><br>
 
@@ -36,7 +36,7 @@ sudo docker pull ubuntu:latest
 
 <br>
 
-![Step 3 Image](images/SimpleDocker_Step3.png?raw=true)
+![Step 3 Image](images/SimpleDocker_Step3.jpg?raw=true)
 
 <br><br>
 
@@ -48,7 +48,7 @@ sudo docker run -it ubuntu:latest /bin/bash
 
 <br>
 
-![Step 4 Image](images/SimpleDocker_Step4.png?raw=true)
+![Step 4 Image](images/SimpleDocker_Step4.jpg?raw=true)
 
 <br><br>
 
@@ -94,7 +94,7 @@ sudo docker run -it -p 80:80 --net=host ubuntu /bin/bash
 
 <br>
 
-![Step 6 Image a](images/SimpleDocker_Step6a.png?raw=true)
+![Step 6 Image a](images/SimpleDocker_Step6a.jpg?raw=true)
 
 <br>
 
@@ -142,7 +142,7 @@ You should see an Nginx welcome page with your edits.
 
 <br>
 
-![Step 6 Image b](images/SimpleDocker_Step6b.png?raw=true)
+![Step 6 Image b](images/SimpleDocker_Step6b.jpg?raw=true)
 
 <br><br>
 
@@ -162,7 +162,7 @@ sudo docker commit <idofcontainerlistedinthelastoutput> <yourfirstname>/nginx
 
 <br>
 
-![Step 7 Image a](images/SimpleDocker_Step7a.png?raw=true)
+![Step 7 Image a](images/SimpleDocker_Step7a.jpg?raw=true)
 
 <br>
 
@@ -195,7 +195,7 @@ Note. The new image is currently only stored locally as it's not been pushed to 
 
 <br>
 
-![Step 7 Image b](images/SimpleDocker_Step7b.png?raw=true)
+![Step 7 Image b](images/SimpleDocker_Step7b.jpg?raw=true)
 
 <br><br>
 
