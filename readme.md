@@ -12,7 +12,7 @@ This has been completed in advance.  Access your 'Docker' VM using Guacamole.
 
 <br><br>
 
-## Step 2 - Run a container using on the 'Hello World' image:
+## Step 2 - Run a container using on 'Hello World' image:
 
 ```
 sudo docker run hello-world
@@ -132,6 +132,10 @@ Start nginx:
 
 <br>
 
+![Step 6 Image b](images/SimpleDocker_Step6b.jpg?raw=true)
+
+<br>
+
 On your 'Mgmt VM' (Windows), browse to:
 
 ```
@@ -142,7 +146,7 @@ You should see an Nginx welcome page with your edits.
 
 <br>
 
-![Step 6 Image b](images/SimpleDocker_Step6b.jpg?raw=true)
+![Step 6 Image c](images/SimpleDocker_Step6c.jpg?raw=true)
 
 <br><br>
 
@@ -181,6 +185,10 @@ sudo docker run -d -p 80:80 --net=host <yourfirstname>/nginx nginx -g 'daemon of
 
 See the '-d' switch which runs the container in the background (i.e. you'll remain at the prompt provided by your 'Docker VM' after seeing an ID printed to screen which is the new container's ID).
 
+<br>
+
+![Step 7 Image b](images/SimpleDocker_Step7b.jpg?raw=true)
+
 <br><br>
 
 On 'Mgmt VM', browse to:
@@ -195,7 +203,7 @@ Note. The new image is currently only stored locally as it's not been pushed to 
 
 <br>
 
-![Step 7 Image b](images/SimpleDocker_Step7b.jpg?raw=true)
+![Step 7 Image c](images/SimpleDocker_Step7c.jpg?raw=true)
 
 <br><br>
 
