@@ -8,11 +8,32 @@ This has been completed in advance.  Access your 'Docker' VM using Guacamole.
 
 <br>
 
+Images key:
+
+| **Line Colour** | **What is it showing?** |
+| :-------- | :------ |
+| Purple | The path of your access to various machines |
+| Black | Console commands and locations |
+| Dark Blue | Docker control plane |
+| Green | Docker actions/events |
+| Red | Standard 'Data Plane' comms |
+| Yellow | Network (logical) |
+
+Docker-specific key:
+
+| **Character** | **Item** |
+| :-------- | :------ |
+| "i:" | Image |
+| "c:" | Container (from image) |
+| "l:" | Writeable union filesystem *layer* atop image |
+
+<br>
+
 ![Step 1 Image](images/SimpleDocker_Step1.jpg?raw=true)
 
 <br><br>
 
-## Step 2 - Run a container using on 'Hello World' image:
+## Step 2 - Run a container using the 'Hello World' image:
 
 ```
 sudo docker run hello-world
