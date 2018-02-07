@@ -1,0 +1,73 @@
+1) RUN A CONTAINER
+Simple: sudo docker run hello-world
+Attach: sudo docker run -it -p 80:8080 --net=host httpd:latest
+Background: sudo docker run -d -p 80:8080 --net=host httpd:latest
+
+2) DOCKERFILE
+FROM nginx
+COPY workdir /usr/share/nginx/html
+
+sudo docker build -t nginx-hello .
+
+
+3) CONTENT
+index.html
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+   <HEAD>
+      <TITLE>
+         Hello world
+      </TITLE>
+   </HEAD>
+<BODY>
+   <H1>Hi</H1>
+   <P>This is very minimal "hello world".</P>
+</BODY>
+</HTML>
+
+
+4) RUN
+sudo docker run --name nginx-hello1 -d -p 80:8080 --net=host nginx-hello
+
+
+5) DOCKER COMPOSE
+sudo nano docker-compose.yml:
+version: '3'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:latest
+     ports:
+       - "80:80"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+volumes:
+    db_data:
+
+sudo docker-compose up -d
+
+sudo docker inspect <ID>
+
+sudo iptables -t nat -A PREROUTING -p tcp -i eth0 --dport 80 -j DNAT --to-destination 172.20.0.3:80
+
+sudo docker-compose down
+
+
+6) SHARE
+https://gist.github.com/dwilkie/f8d6526edc5f1a8aca385df5113567e4
